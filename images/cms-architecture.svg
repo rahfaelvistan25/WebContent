@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480">
+  <defs>
+    <linearGradient id="adminGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#3730A3" />
+    </linearGradient>
+    <linearGradient id="cmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+    <linearGradient id="cdaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.1" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+
+  <!-- Title & Subtitle -->
+  <text x="50" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#0F172A">CMS Three-Component Architecture Workflow</text>
+  <text x="50" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#64748B">How content travels from Content Creator (CMA) through the Database and Content Delivery (CDA) to the Visitor</text>
+
+  <!-- Step 1: Administrator -->
+  <g transform="translate(40, 120)" filter="url(#shadow)">
+    <rect width="160" height="260" rx="12" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="2" />
+    <rect width="160" height="60" rx="12" fill="url(#adminGrad)" />
+    <rect y="48" width="160" height="12" fill="url(#adminGrad)" />
+    <circle cx="80" cy="30" r="14" fill="#ffffff" fill-opacity="0.2" />
+    <text x="80" y="36" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">👤</text>
+    <text x="80" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#1E1B4B" text-anchor="middle">Administrator</text>
+    <text x="80" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#6366F1" text-anchor="middle">CONTENT CREATOR</text>
+    <line x1="20" y1="120" x2="140" y2="120" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="145" font-family="sans-serif" font-size="12" fill="#475569">• Writes articles</text>
+    <text x="20" y="170" font-family="sans-serif" font-size="12" fill="#475569">• Uploads media</text>
+    <text x="20" y="195" font-family="sans-serif" font-size="12" fill="#475569">• Sets permissions</text>
+    <text x="20" y="220" font-family="sans-serif" font-size="12" fill="#475569">• Clicks "Publish"</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 205 250 L 230 250" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Step 2: CMA -->
+  <g transform="translate(235, 120)" filter="url(#shadow)">
+    <rect width="170" height="260" rx="12" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="2" />
+    <rect width="170" height="60" rx="12" fill="url(#cmaGrad)" />
+    <rect y="48" width="170" height="12" fill="url(#cmaGrad)" />
+    <circle cx="85" cy="30" r="14" fill="#ffffff" fill-opacity="0.2" />
+    <text x="85" y="36" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">⚙️</text>
+    <text x="85" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#0C4A6E" text-anchor="middle">CMA Component</text>
+    <text x="85" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#0284C7" text-anchor="middle">CONTENT MANAGEMENT APP</text>
+    <line x1="20" y1="120" x2="150" y2="120" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="145" font-family="sans-serif" font-size="12" fill="#475569">• Admin dashboard</text>
+    <text x="20" y="170" font-family="sans-serif" font-size="12" fill="#475569">• WYSIWYG editor</text>
+    <text x="20" y="195" font-family="sans-serif" font-size="12" fill="#475569">• Categorization &amp; tags</text>
+    <text x="20" y="220" font-family="sans-serif" font-size="12" fill="#475569">• Workflow controls</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 410 250 L 435 250" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Step 3: Database -->
+  <g transform="translate(440, 105)" filter="url(#shadow)">
+    <rect width="170" height="290" rx="12" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2.5" />
+    <rect width="170" height="65" rx="12" fill="url(#dbGrad)" />
+    <rect y="50" width="170" height="15" fill="url(#dbGrad)" />
+    <circle cx="85" cy="33" r="14" fill="#ffffff" fill-opacity="0.2" />
+    <text x="85" y="40" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">🗄️</text>
+    <text x="85" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#134E4A" text-anchor="middle">Database</text>
+    <text x="85" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#0D9488" text-anchor="middle">CENTRAL DATA REPOSITORY</text>
+    <line x1="20" y1="125" x2="150" y2="125" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="150" font-family="sans-serif" font-size="12" fill="#475569">• Article content</text>
+    <text x="20" y="175" font-family="sans-serif" font-size="12" fill="#475569">• User accounts &amp; roles</text>
+    <text x="20" y="200" font-family="sans-serif" font-size="12" fill="#475569">• Media paths &amp; metadata</text>
+    <text x="20" y="225" font-family="sans-serif" font-size="12" fill="#475569">• Settings &amp; timestamps</text>
+    <rect x="20" y="245" width="130" height="30" rx="6" fill="#CCFBF1" />
+    <text x="85" y="265" font-family="sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">MySQL / MariaDB / PG</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 615 250 L 640 250" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Step 4: CDA -->
+  <g transform="translate(645, 120)" filter="url(#shadow)">
+    <rect width="170" height="260" rx="12" fill="#FFFFFF" stroke="#FED7AA" stroke-width="2" />
+    <rect width="170" height="60" rx="12" fill="url(#cdaGrad)" />
+    <rect y="48" width="170" height="12" fill="url(#cdaGrad)" />
+    <circle cx="85" cy="30" r="14" fill="#ffffff" fill-opacity="0.2" />
+    <text x="85" y="36" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">🚀</text>
+    <text x="85" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#7C2D12" text-anchor="middle">CDA Component</text>
+    <text x="85" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#EA580C" text-anchor="middle">CONTENT DELIVERY APP</text>
+    <line x1="20" y1="120" x2="150" y2="120" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="145" font-family="sans-serif" font-size="12" fill="#475569">• Queries database</text>
+    <text x="20" y="170" font-family="sans-serif" font-size="12" fill="#475569">• Merges with templates</text>
+    <text x="20" y="195" font-family="sans-serif" font-size="12" fill="#475569">• Generates HTML</text>
+    <text x="20" y="220" font-family="sans-serif" font-size="12" fill="#475569">• Delivers to browser</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <path d="M 820 250 L 845 250" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Step 5: Visitor -->
+  <g transform="translate(850, 120)" filter="url(#shadow)">
+    <rect width="140" height="260" rx="12" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="2" />
+    <rect width="140" height="60" rx="12" fill="url(#userGrad)" />
+    <rect y="48" width="140" height="12" fill="url(#userGrad)" />
+    <circle cx="70" cy="30" r="14" fill="#ffffff" fill-opacity="0.2" />
+    <text x="70" y="36" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">🌐</text>
+    <text x="70" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#14532D" text-anchor="middle">Student / Visitor</text>
+    <text x="70" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">AUDIENCE</text>
+    <line x1="15" y1="120" x2="125" y2="120" stroke="#E2E8F0" stroke-width="1" />
+    <text x="15" y="145" font-family="sans-serif" font-size="12" fill="#475569">• Opens web page</text>
+    <text x="15" y="170" font-family="sans-serif" font-size="12" fill="#475569">• Views latest info</text>
+    <text x="15" y="195" font-family="sans-serif" font-size="12" fill="#475569">• Reads announcements</text>
+    <text x="15" y="220" font-family="sans-serif" font-size="12" fill="#475569">• Consumes media</text>
+  </g>
+
+  <!-- Bottom Annotation Bar -->
+  <rect x="40" y="420" width="920" height="40" rx="8" fill="#EEF2F6" stroke="#CBD5E1" stroke-width="1" />
+  <text x="500" y="445" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">Key Rule: The CMA manages content input; the Database stores it; the CDA retrieves and delivers it to visitors.</text>
+</svg>
+

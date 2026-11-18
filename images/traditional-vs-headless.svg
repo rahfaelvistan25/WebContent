@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+
+  <text x="50" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#0F172A">Comparing CMS Architectures: Monolithic vs. Decoupled vs. Headless</text>
+  <text x="50" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#64748B">Notice how frontend presentation becomes progressively separated and multi-channel enabled</text>
+
+  <!-- Model 1: Traditional / Coupled -->
+  <g transform="translate(40, 95)" filter="url(#cardShadow)">
+    <rect width="280" height="345" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2" />
+    <rect width="280" height="48" rx="12" fill="#2563EB" />
+    <rect y="36" width="280" height="12" fill="#2563EB" />
+    <text x="140" y="30" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1. Traditional (Coupled)</text>
+
+    <!-- Combined Box -->
+    <rect x="25" y="70" width="230" height="150" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4" />
+    <text x="140" y="92" font-family="sans-serif" font-size="12" font-weight="700" fill="#1D4ED8" text-anchor="middle">SINGLE INTEGRATED APPLICATION</text>
+
+    <rect x="40" y="105" width="200" height="45" rx="6" fill="#BFDBFE" />
+    <text x="140" y="128" font-family="sans-serif" font-size="13" font-weight="700" fill="#1E3A8A" text-anchor="middle">Frontend Presentation</text>
+    <text x="140" y="142" font-family="sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">Themes, Templates, PHP Views</text>
+
+    <line x1="140" y1="150" x2="140" y2="165" stroke="#3B82F6" stroke-width="2" />
+
+    <rect x="40" y="165" width="200" height="45" rx="6" fill="#DBEAFE" />
+    <text x="140" y="188" font-family="sans-serif" font-size="13" font-weight="700" fill="#1E3A8A" text-anchor="middle">Backend CMS + Database</text>
+    <text x="140" y="202" font-family="sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">Admin Dashboard, MySQL</text>
+
+    <text x="25" y="245" font-family="sans-serif" font-size="12" font-weight="700" fill="#0F172A">Example: Standard WordPress</text>
+    <text x="25" y="268" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Easy to install &amp; maintain</text>
+    <text x="25" y="288" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Ready-made themes &amp; plugins</text>
+    <text x="25" y="308" font-family="sans-serif" font-size="11" fill="#DC2626">✗ Frontend tied to CMS language</text>
+    <text x="25" y="328" font-family="sans-serif" font-size="11" fill="#DC2626">✗ Limited to web presentation</text>
+  </g>
+
+  <!-- Model 2: Decoupled -->
+  <g transform="translate(360, 95)" filter="url(#cardShadow)">
+    <rect width="280" height="345" rx="12" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2" />
+    <rect width="280" height="48" rx="12" fill="#7C3AED" />
+    <rect y="36" width="280" height="12" fill="#7C3AED" />
+    <text x="140" y="30" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2. Decoupled CMS</text>
+
+    <!-- Frontend Box -->
+    <rect x="25" y="65" width="230" height="42" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5" />
+    <text x="140" y="86" font-family="sans-serif" font-size="12" font-weight="700" fill="#5B21B6" text-anchor="middle">Frontend App (React / Next.js)</text>
+    <text x="140" y="99" font-family="sans-serif" font-size="10" fill="#6D28D9" text-anchor="middle">Dedicated presentation layer</text>
+
+    <!-- API bridge -->
+    <path d="M 140 108 L 140 135" stroke="#7C3AED" stroke-width="2" stroke-dasharray="3" />
+    <rect x="85" y="115" width="110" height="20" rx="4" fill="#DDD6FE" />
+    <text x="140" y="129" font-family="sans-serif" font-size="10" font-weight="800" fill="#5B21B6" text-anchor="middle">REST / GraphQL API</text>
+
+    <!-- Backend Box -->
+    <rect x="25" y="145" width="230" height="45" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5" />
+    <text x="140" y="166" font-family="sans-serif" font-size="12" font-weight="700" fill="#5B21B6" text-anchor="middle">Backend CMS (e.g. Drupal)</text>
+    <text x="140" y="180" font-family="sans-serif" font-size="10" fill="#6D28D9" text-anchor="middle">Content creation &amp; storage</text>
+
+    <text x="25" y="215" font-family="sans-serif" font-size="12" font-weight="700" fill="#0F172A">Example: Drupal + React via API</text>
+    <text x="25" y="240" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Greater frontend flexibility</text>
+    <text x="25" y="260" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Independent frontend/backend dev</text>
+    <text x="25" y="280" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Security: backend hidden behind API</text>
+    <text x="25" y="300" font-family="sans-serif" font-size="11" fill="#DC2626">✗ More complex development</text>
+    <text x="25" y="320" font-family="sans-serif" font-size="11" fill="#DC2626">✗ Requires API maintenance</text>
+  </g>
+
+  <!-- Model 3: Headless CMS -->
+  <g transform="translate(680, 95)" filter="url(#cardShadow)">
+    <rect width="280" height="345" rx="12" fill="#FFFFFF" stroke="#FDE047" stroke-width="2" />
+    <rect width="280" height="48" rx="12" fill="#0F766E" />
+    <rect y="36" width="280" height="12" fill="#0F766E" />
+    <text x="140" y="30" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3. Headless CMS</text>
+
+    <!-- Multi-channel delivery targets -->
+    <g transform="translate(15, 62)">
+      <rect x="0" y="0" width="55" height="35" rx="4" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1" />
+      <text x="27" y="16" font-family="sans-serif" font-size="11" text-anchor="middle">🌐</text>
+      <text x="27" y="28" font-family="sans-serif" font-size="8" font-weight="700" fill="#0F766E" text-anchor="middle">Web App</text>
+
+      <rect x="65" y="0" width="55" height="35" rx="4" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1" />
+      <text x="92" y="16" font-family="sans-serif" font-size="11" text-anchor="middle">📱</text>
+      <text x="92" y="28" font-family="sans-serif" font-size="8" font-weight="700" fill="#0F766E" text-anchor="middle">iOS/Android</text>
+
+      <rect x="130" y="0" width="55" height="35" rx="4" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1" />
+      <text x="157" y="16" font-family="sans-serif" font-size="11" text-anchor="middle">📺</text>
+      <text x="157" y="28" font-family="sans-serif" font-size="8" font-weight="700" fill="#0F766E" text-anchor="middle">Smart TV</text>
+
+      <rect x="195" y="0" width="55" height="35" rx="4" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1" />
+      <text x="222" y="16" font-family="sans-serif" font-size="11" text-anchor="middle">📟</text>
+      <text x="222" y="28" font-family="sans-serif" font-size="8" font-weight="700" fill="#0F766E" text-anchor="middle">IoT / Kiosk</text>
+    </g>
+
+    <!-- APIs -->
+    <path d="M 140 100 L 140 128" stroke="#0F766E" stroke-width="2" stroke-dasharray="3" />
+    <rect x="60" y="112" width="160" height="20" rx="4" fill="#99F6E4" />
+    <text x="140" y="126" font-family="sans-serif" font-size="10" font-weight="800" fill="#0F766E" text-anchor="middle">Pure API Endpoints (JSON)</text>
+
+    <!-- Headless CMS Hub -->
+    <rect x="25" y="138" width="230" height="45" rx="6" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1.5" />
+    <text x="140" y="158" font-family="sans-serif" font-size="12" font-weight="700" fill="#042F2E" text-anchor="middle">Headless Content Engine</text>
+    <text x="140" y="174" font-family="sans-serif" font-size="10" fill="#0F766E" text-anchor="middle">No built-in frontend presentation</text>
+
+    <text x="25" y="208" font-family="sans-serif" font-size="12" font-weight="700" fill="#0F172A">Examples: Strapi, Contentful, Sanity</text>
+    <text x="25" y="230" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Reuse 1 content source everywhere</text>
+    <text x="25" y="250" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Total developer frontend freedom</text>
+    <text x="25" y="270" font-family="sans-serif" font-size="11" fill="#16A34A">✓ Future-proof for new devices</text>
+    <text x="25" y="290" font-family="sans-serif" font-size="11" fill="#DC2626">✗ No out-of-the-box frontend page</text>
+    <text x="25" y="310" font-family="sans-serif" font-size="11" fill="#DC2626">✗ Requires dedicated app developers</text>
+  </g>
+</svg>
+

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480">
+  <defs>
+    <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <marker id="stepArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="480" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+
+  <text x="50" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#0F172A">Case Study: School Announcement Lifecycle Flow</text>
+  <text x="50" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#64748B">Step-by-step lifecycle from teacher draft to published student announcement</text>
+
+  <!-- Top Row: Steps 1 to 4 (Admin / CMA Side) -->
+  <g transform="translate(40, 90)">
+    <!-- Step 1 -->
+    <g transform="translate(0, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="150" rx="10" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#4F46E5" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#1E1B4B">Admin Login</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Admin enters username</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Authenticates via password</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Accesses CMA dashboard</text>
+      <text x="20" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#4F46E5">Role: Administrator</text>
+    </g>
+
+    <!-- Arrow 1->2 -->
+    <path d="M 215 75 L 235 75" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 2 -->
+    <g transform="translate(240, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="150" rx="10" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#4F46E5" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#1E1B4B">Create Post</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Title: "Enrollment Period"</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Category: Admissions</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Deadline: Nov 15</text>
+      <text x="20" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#0284C7">CMA Editor UI</text>
+    </g>
+
+    <!-- Arrow 2->3 -->
+    <path d="M 455 75 L 475 75" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 3 -->
+    <g transform="translate(480, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="150" rx="10" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#0D9488" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#134E4A">Save to DB</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• CMS issues SQL INSERT</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Content stored in rows</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Status = "Pending"</text>
+      <text x="20" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#0D9488">MySQL / MariaDB</text>
+    </g>
+
+    <!-- Arrow 3->4 -->
+    <path d="M 695 75 L 715 75" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 4 -->
+    <g transform="translate(720, 0)" filter="url(#boxShadow)">
+      <rect width="200" height="150" rx="10" fill="#FFFFFF" stroke="#FED7AA" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#EA580C" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#7C2D12">Review &amp; Publish</text>
+      <line x1="20" y1="58" x2="180" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Editor reviews content</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Approves accuracy</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Status = "Published"</text>
+      <text x="20" y="140" font-family="sans-serif" font-size="11" font-weight="600" fill="#EA580C">Workflow Complete</text>
+    </g>
+  </g>
+
+  <!-- Connective bend between Row 1 and Row 2 -->
+  <path d="M 820 245 L 820 270 L 145 270 L 145 290" fill="none" stroke="#4F46E5" stroke-width="2.5" stroke-dasharray="4" marker-end="url(#stepArrow)" />
+
+  <!-- Bottom Row: Steps 5 to 8 (Delivery / CDA / Public Side) -->
+  <g transform="translate(40, 300)">
+    <!-- Step 5 -->
+    <g transform="translate(0, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="145" rx="10" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#16A34A" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">5</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#14532D">Student Visits</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Student opens browser</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Navigates to school portal</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Clicks "Announcements"</text>
+      <text x="20" y="138" font-family="sans-serif" font-size="11" font-weight="600" fill="#16A34A">Public Request</text>
+    </g>
+
+    <!-- Arrow 5->6 -->
+    <path d="M 215 72 L 235 72" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 6 -->
+    <g transform="translate(240, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="145" rx="10" fill="#FFFFFF" stroke="#FED7AA" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#EA580C" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">6</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#7C2D12">CDA Retrieves</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Queries DB for active posts</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• SELECT * WHERE status='pub'</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Injects into page template</text>
+      <text x="20" y="138" font-family="sans-serif" font-size="11" font-weight="600" fill="#EA580C">CDA Pipeline</text>
+    </g>
+
+    <!-- Arrow 6->7 -->
+    <path d="M 455 72 L 475 72" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 7 -->
+    <g transform="translate(480, 0)" filter="url(#boxShadow)">
+      <rect width="210" height="145" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#0284C7" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">7</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#0C4A6E">Generate HTML</text>
+      <line x1="20" y1="58" x2="190" y2="58" stroke="#EEF2F6" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#475569">• Merges CSS, layout, header</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#475569">• Assembles final webpage</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#475569">• Sends HTTP 200 stream</text>
+      <text x="20" y="138" font-family="sans-serif" font-size="11" font-weight="600" fill="#0284C7">Dynamic Response</text>
+    </g>
+
+    <!-- Arrow 7->8 -->
+    <path d="M 695 72 L 715 72" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#stepArrow)" />
+
+    <!-- Step 8 -->
+    <g transform="translate(720, 0)" filter="url(#boxShadow)">
+      <rect width="200" height="145" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2" />
+      <circle cx="35" cy="30" r="16" fill="#16A34A" />
+      <text x="35" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">8</text>
+      <text x="65" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#14532D">Post Appears!</text>
+      <line x1="20" y1="58" x2="180" y2="58" stroke="#DCFCE7" stroke-width="1.5" />
+      <text x="20" y="80" font-family="sans-serif" font-size="11" fill="#14532D">• Announcement rendered</text>
+      <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#14532D">• Student sees deadline</text>
+      <text x="20" y="120" font-family="sans-serif" font-size="11" fill="#14532D">• No code edit was needed!</text>
+      <text x="20" y="138" font-family="sans-serif" font-size="11" font-weight="700" fill="#15803D">Success ✨</text>
+    </g>
+  </g>
+</svg>
+

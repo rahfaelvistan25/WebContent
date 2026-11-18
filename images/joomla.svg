@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <g transform="translate(15, 12)">
+    <circle cx="28" cy="22" r="12" fill="#F44321"/>
+    <circle cx="58" cy="22" r="12" fill="#5091CD"/>
+    <circle cx="28" cy="52" r="12" fill="#7AC143"/>
+    <circle cx="58" cy="52" r="12" fill="#FABA13"/>
+  </g>
+  <text x="110" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1e293b" letter-spacing="-0.5">Joomla!</text>
+  <text x="110" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">OPEN-SOURCE MVC CMS</text>
+</svg>
+

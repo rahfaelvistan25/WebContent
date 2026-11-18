@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson: Introduction to Web Content Management Systems (CMS)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="projector-mode">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <div class="brand-icon">CMS</div>
+        <div class="brand-text">
+          <h1>Web Content Management Systems</h1>
+          <div class="course-badge">MWF 9:30 AM – 10:30 AM | College Undergraduate Lecture</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="btnProjector" class="btn-nav-control active" title="Toggle Projector High-Visibility Mode">📽️ Projector Mode</button>
+        <button id="btnDarkMode" class="btn-nav-control" title="Toggle Dark/Light Presentation">🌙 Dim</button>
+        <button id="btnFontDecrease" class="btn-nav-control" title="Decrease Font Size">A-</button>
+        <button id="btnFontIncrease" class="btn-nav-control" title="Increase Font Size">A+</button>
+        <button id="btnFullscreen" class="btn-nav-control" title="Fullscreen Presentation">⤢ Fullscreen</button>
+        <a href="assessment.html" class="btn-assessment-link" target="_blank" title="Open Separate Assessment">📝 Student Assessment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Presenter Lecture Toolbar -->
+  <div class="presenter-bar">
+    <div class="presenter-bar-inner">
+      <div class="slide-stepper">
+        <button id="btnPrevSlide" class="step-btn">◀ Previous</button>
+        <span id="slideIndicator" class="step-indicator">Topic 1 of 8</span>
+        <button id="btnNextSlide" class="step-btn">Next ▶</button>
+      </div>
+      <div class="presenter-meta">
+        <span>⏱️ Lecture Elapsed: <strong id="lectureTimer" class="lecture-timer">00:00:00</strong></span>
+        <span>Target: <strong>2–3 Hours</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-meta-badges">
+        <span class="meta-badge">Subject: Web Development / Web Technologies</span>
+        <span class="meta-badge">Level: College / Undergraduate</span>
+        <span class="meta-badge">Schedule: MWF 9:30 AM – 10:30 AM</span>
+        <span class="meta-badge">Module Duration: 2–3 Hours</span>
+      </div>
+      <h1 class="hero-title">MODULE: INTRODUCTION TO WEB CONTENT MANAGEMENT SYSTEMS (CMS)</h1>
+      <p class="hero-subtitle">
+        A comprehensive visual guide designed for projector lecture delivery. Discover how modern digital content is created, organized, stored in databases, and dynamically delivered to visitors worldwide.
+      </p>
+      <div class="hero-quicklinks">
+        <a href="#section-intro" class="btn-hero btn-hero-secondary">🚀 Start Lecture</a>
+        <a href="#section-architectures" class="btn-hero btn-hero-secondary">🏛️ Architectures</a>
+        <a href="#section-static-dynamic" class="btn-hero btn-hero-secondary">⚡ Static vs Dynamic</a>
+        <a href="#section-simulator" class="btn-hero btn-hero-secondary">🧪 Live CMS Simulator</a>
+        <a href="assessment.html" class="btn-hero btn-hero-primary" target="_blank">📝 Go to Assessment</a>
+      </div>
+    </section>
+
+    <!-- SECTION I: INTRODUCTION -->
+    <section id="section-intro" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section I</span>
+          <h2 class="section-title">Introduction to Content Management Systems</h2>
+          <p class="section-intro-text">Understanding the transition from manual code updates to automated administrative platforms.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content">
+          <h4>Core Definition</h4>
+          <p>A <strong>Content Management System (CMS)</strong> is a software application or platform that allows users to create, edit, organize, manage, and publish website content without needing to manually write all the code.</p>
+        </div>
+      </div>
+
+      <div class="pros-cons-grid">
+        <div class="cons-box">
+          <h3>Traditional Web Development</h3>
+          <ul>
+            <li>Developers must manually write HTML, CSS, JavaScript, and backend code.</li>
+            <li>Every announcement, typo fix, or news item requires modifying raw code files.</li>
+            <li>Non-technical staff cannot update pages independently.</li>
+            <li>High dependency on programmers for basic content edits.</li>
+          </ul>
+        </div>
+        <div class="pros-box">
+          <h3>With a CMS</h3>
+          <ul>
+            <li>Users manage content through a graphical user interface (GUI) or dashboard.</li>
+            <li>Non-technical administrators can publish articles in seconds.</li>
+            <li>Content is stored neatly in databases and separated from design.</li>
+            <li>Supports user permissions, templates, drafts, and scheduled posts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Real World School Example -->
+      <div class="callout callout-success">
+        <div class="callout-icon">🏫</div>
+        <div class="callout-content">
+          <h4>Everyday Scenario: The School Website Announcement</h4>
+          <p>Imagine you own a school website. Without a CMS, posting an upcoming enrollment notice requires opening code editors or waiting for a programmer. With a CMS, the administrator simply:</p>
+          <ol style="margin-left: 1.5rem; margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6;">
+            <li>Logs in to the administration dashboard.</li>
+            <li>Opens the Posts or Pages section.</li>
+            <li>Writes the announcement details.</li>
+            <li>Adds images or media references.</li>
+            <li>Clicks <strong>Publish</strong> — and the notice is live across the globe automatically!</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Popular CMS Platforms Showcase -->
+      <h3 style="font-size: 1.4rem; font-weight: 800; margin: 2rem 0 1rem;">Examples of Popular CMS Platforms</h3>
+      <div class="platforms-grid">
+        <!-- WordPress -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <img src="images/wordpress.svg" alt="WordPress Logo">
+          </div>
+          <span class="platform-type-tag">Open-Source / Monolithic</span>
+          <div class="platform-name">WordPress</div>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">One of the most widely used CMS platforms on Earth, powering over 40% of all websites.</p>
+          <ul>
+            <li>Ideal for blogs, corporate portals, portfolios, and stores.</li>
+            <li>Massive ecosystem of themes and plugins.</li>
+            <li>Extensible with WooCommerce for e-commerce.</li>
+          </ul>
+        </div>
+
+        <!-- Joomla -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <img src="images/joomla.svg" alt="Joomla Logo">
+          </div>
+          <span class="platform-type-tag">Open-Source / MVC</span>
+          <div class="platform-name">Joomla!</div>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">A powerful open-source CMS built with Model-View-Controller architecture.</p>
+          <ul>
+            <li>Advanced native content organization and taxonomy.</li>
+            <li>Robust built-in user role management.</li>
+            <li>Great for institutional and community websites.</li>
+          </ul>
+        </div>
+
+        <!-- Drupal -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <img src="images/drupal.svg" alt="Drupal Logo">
+          </div>
+          <span class="platform-type-tag">Enterprise Open-Source</span>
+          <div class="platform-name">Drupal</div>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">A highly flexible, modular CMS designed for complex, high-traffic websites.</p>
+          <ul>
+            <li>Advanced granular user permissions and workflows.</li>
+            <li>Widely chosen by universities, governments, and NGOs.</li>
+            <li>Superb API and decoupled headless capabilities.</li>
+          </ul>
+        </div>
+
+        <!-- Shopify -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <img src="images/shopify.svg" alt="Shopify Logo">
+          </div>
+          <span class="platform-type-tag">Hosted E-Commerce CMS</span>
+          <div class="platform-name">Shopify</div>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">A leading e-commerce platform with integrated content management features.</p>
+          <ul>
+            <li>Manage products, checkout pages, inventory, and blog posts.</li>
+            <li>Hosted cloud infrastructure with built-in payment gateways.</li>
+            <li>Extensive template store and app ecosystem.</li>
+          </ul>
+        </div>
+
+        <!-- Wix -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <img src="images/wix.svg" alt="Wix Logo">
+          </div>
+          <span class="platform-type-tag">Visual Website Builder</span>
+          <div class="platform-name">Wix</div>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">A drag-and-drop cloud website builder with integrated CMS functionality.</p>
+          <ul>
+            <li>Intuitive visual editing without touching any code.</li>
+            <li>Hundreds of ready-made designer templates.</li>
+            <li>Built-in dynamic content collections (Wix Studio).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dashboard Visual Example -->
+      <div class="diagram-container">
+        <img src="images/wordpress-dashboard.svg" alt="WordPress 6.4 Admin Dashboard Visual Interface">
+        <div class="diagram-caption">Figure 1.1: Administrative Graphical User Interface (CMA) in WordPress — showing navigation menus, post creation tools, and quick drafts.</div>
+      </div>
+    </section>
+
+    <!-- SECTION II: LEARNING OBJECTIVES -->
+    <section id="section-objectives" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section II</span>
+          <h2 class="section-title">Learning Objectives</h2>
+          <p class="section-intro-text">Key competencies students are expected to master during this module.</p>
+        </div>
+        <div style="font-weight: 700; color: var(--primary);" id="objProgressText">0 of 7 Mastered</div>
+      </div>
+
+      <div class="objectives-grid">
+        <div class="objective-item">
+          <div class="objective-num">1</div>
+          <div class="objective-text">
+            <strong>Define &amp; Explain:</strong> Articulate the purpose, benefits, and core definitions of Content Management Systems.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">2</div>
+          <div class="objective-text">
+            <strong>Identify Components:</strong> Deconstruct CMS architectures into CMA, CDA, and Database tiers.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">3</div>
+          <div class="objective-text">
+            <strong>Differentiate Websites:</strong> Distinguish static from dynamic websites by delivery mechanism and data source.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">4</div>
+          <div class="objective-text">
+            <strong>Explain Principles:</strong> Outline the 9 fundamental principles of dynamic content management.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">5</div>
+          <div class="objective-text">
+            <strong>Evaluate Platforms:</strong> Analyze popular platforms (WordPress, Joomla, Drupal, Shopify, Wix) for real-world scenarios.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">6</div>
+          <div class="objective-text">
+            <strong>Trace Content Lifecycle:</strong> Describe how content journeys from administrator creation to visitor rendering.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+        <div class="objective-item">
+          <div class="objective-num">7</div>
+          <div class="objective-text">
+            <strong>Assess Trade-offs:</strong> Weigh the advantages against the limitations and security challenges of CMS usage.
+            <div style="margin-top: 0.5rem;"><label><input type="checkbox" class="obj-checkbox"> Mark as Understood</label></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION III: TOPIC 1 - CMS ARCHITECTURES -->
+    <section id="section-architectures" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Topic 1</span>
+          <h2 class="section-title">CMS Architectures</h2>
+          <p class="section-intro-text">Structure, internal communication, and deployment models of content management platforms.</p>
+        </div>
+      </div>
+
+      <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
+        <strong>CMS architecture</strong> refers to the structural organization of components that work synchronously to create, store, manage, and display website content. A typical system operates across three fundamental tiers:
+      </p>
+
+      <!-- 3 Components -->
+      <div class="arch-components-grid">
+        <!-- CMA -->
+        <div class="arch-component-card">
+          <div class="arch-icon-badge badge-cma">⚙️</div>
+          <h3>A. CMA Component</h3>
+          <div class="arch-subtitle">Content Management Application</div>
+          <p>The administrative frontend where creators, editors, and webmasters produce and format digital materials.</p>
+          <div class="function-list">
+            <h4>Key Functions:</h4>
+            <ul>
+              <li>Create and edit pages &amp; posts</li>
+              <li>Upload images, video, and documents</li>
+              <li>Assign categories, tags, and taxonomies</li>
+              <li>Manage user roles &amp; access permissions</li>
+              <li>Schedule or immediately publish content</li>
+            </ul>
+          </div>
+          <div class="example-box">
+            <strong>Example:</strong> School administrator logging into WordPress to write the upcoming semester enrollment bulletin.
+          </div>
+        </div>
+
+        <!-- CDA -->
+        <div class="arch-component-card">
+          <div class="arch-icon-badge badge-cda">🚀</div>
+          <h3>B. CDA Component</h3>
+          <div class="arch-subtitle">Content Delivery Application</div>
+          <p>The delivery pipeline responsible for retrieving stored content and packaging it for website visitors.</p>
+          <div class="function-list">
+            <h4>Key Functions:</h4>
+            <ul>
+              <li>Processes visitor HTTP requests</li>
+              <li>Queries database for approved content</li>
+              <li>Combines content data with presentation templates</li>
+              <li>Generates valid HTML/CSS/JS dynamically</li>
+              <li>Streams responses to visitor web browsers</li>
+            </ul>
+          </div>
+          <div class="example-box">
+            <strong>Example:</strong> When a student loads the campus homepage, the CDA fetches and formats the enrollment notice.
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="arch-component-card">
+          <div class="arch-icon-badge badge-db">🗄️</div>
+          <h3>C. Database</h3>
+          <div class="arch-subtitle">Central Persistent Storage</div>
+          <p>The relational or document data repository that securely preserves all dynamic information utilized by the CMS.</p>
+          <div class="function-list">
+            <h4>Stored Information:</h4>
+            <ul>
+              <li>Articles, pages, and revision history</li>
+              <li>User credentials and password hashes</li>
+              <li>Media metadata and file storage paths</li>
+              <li>Categories, tags, and site settings</li>
+              <li>Publication timestamps and view statistics</li>
+            </ul>
+          </div>
+          <div class="example-box">
+            <strong>Technologies:</strong> MySQL, MariaDB, PostgreSQL, SQLite.
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture Workflow Diagram -->
+      <div class="diagram-container">
+        <img src="images/cms-architecture.svg" alt="CMS Architecture Flowchart Diagram">
+        <div class="diagram-caption">Figure 1.2: End-to-End CMS Workflow — Administrator (CMA) ➔ Database ➔ CDA ➔ Visitor Browser.</div>
+      </div>
+
+      <!-- Types of CMS Architecture -->
+      <h3 style="font-size: 1.45rem; font-weight: 800; margin: 2.5rem 0 1rem;">Common Types of CMS Architecture</h3>
+      
+      <div class="diagram-container">
+        <img src="images/traditional-vs-headless.svg" alt="Monolithic vs Decoupled vs Headless CMS Architecture Comparison">
+        <div class="diagram-caption">Figure 1.3: Evolution of CMS Architectures from Monolithic (Coupled) to Decoupled and Headless.</div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Traditional / Coupled</th>
+              <th>Decoupled CMS</th>
+              <th>Headless CMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Backend</strong></td>
+              <td>Integrated with frontend</td>
+              <td>Separate CMS engine</td>
+              <td>Separate CMS engine</td>
+            </tr>
+            <tr>
+              <td><strong>Frontend</strong></td>
+              <td>Tightly coupled (built-in templates)</td>
+              <td>Separate dedicated frontend</td>
+              <td>Completely independent (Any device)</td>
+            </tr>
+            <tr>
+              <td><strong>API Usage</strong></td>
+              <td>Optional / Minimal</td>
+              <td>Common (REST / GraphQL)</td>
+              <td>Essential (Core requirement)</td>
+            </tr>
+            <tr>
+              <td><strong>Flexibility</strong></td>
+              <td>Moderate (Bound to theme engine)</td>
+              <td>High (Choose modern JS framework)</td>
+              <td>Maximum (Omnichannel delivery)</td>
+            </tr>
+            <tr>
+              <td><strong>Complexity</strong></td>
+              <td>Low (Quick setup)</td>
+              <td>Medium–High</td>
+              <td>Medium–High (Requires app devs)</td>
+            </tr>
+            <tr>
+              <td><strong>Example Platforms</strong></td>
+              <td>WordPress, Joomla</td>
+              <td>Drupal backend + Next.js frontend</td>
+              <td>Strapi, Contentful, Sanity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-icon">📌</div>
+        <div class="callout-content">
+          <h4>Important Architectural Distinction</h4>
+          <p>Decoupled and headless architectures are closely related cousins. A <strong>headless CMS</strong> is a pure form of decoupled architecture where the CMS provides <em>zero</em> default presentation layer — leaving the frontend entirely up to mobile apps, smart displays, websites, or IoT interfaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION III: TOPIC 2 - STATIC VS DYNAMIC WEBSITES -->
+    <section id="section-static-dynamic" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Topic 2</span>
+          <h2 class="section-title">Static vs. Dynamic Websites</h2>
+          <p class="section-intro-text">Understanding how web servers process files versus generating on-demand responses.</p>
+        </div>
+      </div>
+
+      <!-- Static vs Dynamic Diagram -->
+      <div class="diagram-container">
+        <img src="images/static-vs-dynamic.svg" alt="Static vs Dynamic Website Architecture Request Flow Diagram">
+        <div class="diagram-caption">Figure 1.4: Request processing comparison between Static pre-built files and Dynamic database-driven websites.</div>
+      </div>
+
+      <div class="pros-cons-grid">
+        <!-- Static Breakdown -->
+        <div class="cons-box" style="border-color: #93c5fd; background: rgba(59, 130, 246, 0.04);">
+          <h3 style="color: #2563eb;">Static Websites</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">A static site delivers fixed, pre-created HTML, CSS, and media files directly from the web server disk. The server sends the exact same page to every visitor unless files are re-uploaded.</p>
+          <ul style="color: var(--text-muted);">
+            <li><strong>Technologies:</strong> HTML, CSS, Client-side JS, Web server (Apache, Nginx, CDN).</li>
+            <li><strong>Advantages:</strong> Blazing-fast loading, simple low-cost hosting, minimal attack surface.</li>
+            <li><strong>Disadvantages:</strong> Manual updates required, difficult to scale large content, no built-in user personalization.</li>
+            <li><strong>Real-World Example:</strong> A developer's personal portfolio or a simple informational landing page.</li>
+          </ul>
+        </div>
+
+        <!-- Dynamic Breakdown -->
+        <div class="pros-box" style="border-color: #c4b5fd; background: rgba(139, 92, 246, 0.04);">
+          <h3 style="color: #7c3aed;">Dynamic Websites</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">A dynamic site constructs web pages on-the-fly using backend scripting (PHP, Python, Node) and queries from a live database based on user requests, sessions, or conditions.</p>
+          <ul style="color: var(--text-muted);">
+            <li><strong>Technologies:</strong> PHP, Python, Node.js + MySQL, PostgreSQL, MongoDB + React/Vue.</li>
+            <li><strong>Advantages:</strong> Personalized experiences, user accounts/authentication, instant dashboard updates.</li>
+            <li><strong>Disadvantages:</strong> Higher server overhead, database maintenance required, security hardening needed.</li>
+            <li><strong>Real-World Example:</strong> University student enrollment portal or e-commerce shop.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Side-by-side Table -->
+      <h3 style="font-size: 1.35rem; font-weight: 800; margin: 2rem 0 1rem;">Direct Comparison Matrix</h3>
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Evaluation Factor</th>
+              <th>Static Website</th>
+              <th>Dynamic Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Content Delivery</strong></td>
+              <td>Pre-created files served as-is</td>
+              <td>Generated on-demand from data queries</td>
+            </tr>
+            <tr>
+              <td><strong>Database Necessity</strong></td>
+              <td>Not usually needed</td>
+              <td>Commonly used &amp; required</td>
+            </tr>
+            <tr>
+              <td><strong>How Updates Occur</strong></td>
+              <td>Directly editing &amp; re-uploading HTML/CSS files</td>
+              <td>Updated via CMS graphical dashboard</td>
+            </tr>
+            <tr>
+              <td><strong>Personalization</strong></td>
+              <td>None / very limited</td>
+              <td>Fully supported (different data per student)</td>
+            </tr>
+            <tr>
+              <td><strong>User Accounts &amp; Login</strong></td>
+              <td>Not built-in</td>
+              <td>Supported (Sessions, JWT, Auth)</td>
+            </tr>
+            <tr>
+              <td><strong>Development Complexity</strong></td>
+              <td>Generally simpler</td>
+              <td>More complex architecture</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Important Clarification -->
+      <div class="callout callout-info">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-content">
+          <h4>Critical Concept: Dynamic Does Not Always Mean Database-Driven</h4>
+          <p>A website can use client-side JavaScript to modify content dynamically in the browser without any database. Conversely, a website can use a database during a build step to output pre-generated static pages (Static Site Generators like Hugo or Astro). The primary distinction is <strong>how content is generated and delivered</strong>, not merely whether a database exists.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION III: TOPIC 3 - DYNAMIC CONTENT MANAGEMENT PRINCIPLES -->
+    <section id="section-principles" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Topic 3</span>
+          <h2 class="section-title">Dynamic Content Management Principles</h2>
+          <p class="section-intro-text">The nine foundational rules governing the lifecycle of digital information in modern web systems.</p>
+        </div>
+      </div>
+
+      <div class="principles-grid">
+        <!-- 1 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 01</span>
+          <h3>1. Content Creation</h3>
+          <p>The structured process of authoring articles, announcements, products, or multimedia through rich WYSIWYG or Markdown editors.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> A professor composing an exam announcement with an embedded syllabus file.
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 02</span>
+          <h3>2. Content Storage</h3>
+          <p>Preserving content safely in normalized databases, cloud object storage, and file systems alongside metadata (author, timestamps, status).</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> The announcement text, date, and author ID saved into the MySQL database tables.
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 03</span>
+          <h3>3. Content Organization</h3>
+          <p>Categorizing assets using taxonomies, hierarchical categories, tags, menus, and metadata so visitors and admins can easily locate items.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> School portal structured into: Academics, Admissions, Campus Life, and Announcements.
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 04</span>
+          <h3>4. Content Editing &amp; Updating</h3>
+          <p>Empowering authorized staff to revise existing records instantly without rebuilding or redeploying the entire website.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> An administrator changing the enrollment deadline date directly in the form field.
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 05</span>
+          <h3>5. Content Publishing</h3>
+          <p>Controlling visibility through lifecycle stages: <em>Draft ➔ Pending Review ➔ Scheduled ➔ Published ➔ Archived</em>.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> Scheduling an emergency notice to appear automatically at exactly 8:00 AM on Monday.
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 06</span>
+          <h3>6. Content Delivery</h3>
+          <p>The CDA retrieves data rows, populates layout templates, applies CSS themes, and transmits optimized responses to the end client.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> Student visits the portal news feed; CMS queries database and streams the rendered HTML page.
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 07</span>
+          <h3>7. User Roles &amp; Permissions</h3>
+          <p>Restricting privileges through Role-Based Access Control (RBAC) to protect sensitive data and prevent unauthorized changes.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> Student contributors can submit drafts, but only Department Heads can click "Publish".
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 08</span>
+          <h3>8. Content Security &amp; Backup</h3>
+          <p>Protecting the CMS ecosystem with HTTPS, multi-factor authentication, software updates, automated daily DB backups, and role auditing.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> If an administrator accidentally deletes an article, database backups restore it in minutes.
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="principle-card">
+          <span class="principle-badge">Principle 09</span>
+          <h3>9. Content Versioning &amp; Workflow</h3>
+          <p>Tracking historical revisions (audit trails) allowing staff to compare edits, see who changed what, and roll back if necessary.</p>
+          <div class="example-box">
+            <strong>Classroom Example:</strong> Writer ➔ Editor Review ➔ Department Administrator ➔ Published Live.
+          </div>
+        </div>
+      </div>
+
+      <!-- Roles & Permissions Table -->
+      <h3 style="font-size: 1.35rem; font-weight: 800; margin: 2rem 0 1rem;">Standard CMS Roles &amp; Responsibilities</h3>
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Access Level</th>
+              <th>Typical Responsibilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Administrator</strong></td>
+              <td>Full / Superuser</td>
+              <td>Manages site settings, plugins, themes, database updates, security, and all user accounts.</td>
+            </tr>
+            <tr>
+              <td><strong>Editor</strong></td>
+              <td>High</td>
+              <td>Reviews, approves, modifies, and publishes posts submitted by any user; organizes categories.</td>
+            </tr>
+            <tr>
+              <td><strong>Author</strong></td>
+              <td>Moderate</td>
+              <td>Writes, edits, and publishes their own posts, and uploads their own media files.</td>
+            </tr>
+            <tr>
+              <td><strong>Contributor</strong></td>
+              <td>Restricted</td>
+              <td>Drafts articles but cannot publish them directly; requires editor approval.</td>
+            </tr>
+            <tr>
+              <td><strong>Subscriber</strong></td>
+              <td>Read-only</td>
+              <td>Can log in to manage their personal profile and read password-protected student content.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION IV: HOW A CMS WORKS: COMPLETE CASE STUDY -->
+    <section id="section-case-study" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section IV</span>
+          <h2 class="section-title">Case Study: School Announcement Management System</h2>
+          <p class="section-intro-text">Observing the end-to-end operational flow from administrator creation to student delivery.</p>
+        </div>
+      </div>
+
+      <div class="diagram-container">
+        <img src="images/school-announcement-flow.svg" alt="School Announcement System Lifecycle 8-Step Process Flow">
+        <div class="diagram-caption">Figure 1.5: Detailed 8-step lifecycle of the School Announcement Management System.</div>
+      </div>
+
+      <!-- Interactive Classroom Simulator -->
+      <div id="section-simulator" class="interactive-simulator-box">
+        <div class="simulator-header">
+          <h3>🧪 Interactive Projector Simulation: Publish an Announcement</h3>
+          <span id="simStatusBadge" class="sim-preview-badge" style="background: #e2e8f0; color: #334155;">Status: Ready for Input</span>
+        </div>
+        <p style="font-size: 0.95rem; margin-bottom: 1.25rem; color: var(--text-muted);">
+          Teacher Demonstration: Type in an announcement, save it to the simulated database, publish it, and watch the Public Student Portal update on the right!
+        </p>
+
+        <div class="sim-columns">
+          <!-- Left: CMA Admin Pane -->
+          <div class="sim-pane">
+            <div class="sim-pane-title">
+              <span>🖥️ Administrator Dashboard (CMA)</span>
+              <span style="font-size: 0.75rem; background: #dbeafe; color: #1e3a8a; padding: 2px 6px; border-radius: 4px;">Role: Admin</span>
+            </div>
+            <div class="sim-form-group">
+              <label for="simTitle">Announcement Title</label>
+              <input type="text" id="simTitle" value="Enrollment Period for Second Semester">
+            </div>
+            <div class="sim-form-group">
+              <label for="simCategory">Category</label>
+              <select id="simCategory">
+                <option value="Admissions">Admissions</option>
+                <option value="Academics">Academics</option>
+                <option value="Student Activities">Student Activities</option>
+                <option value="Campus News">Campus News</option>
+              </select>
+            </div>
+            <div class="sim-form-group">
+              <label for="simDate">Publication Deadline / Date</label>
+              <input type="text" id="simDate" value="November 15">
+            </div>
+            <div class="sim-form-group">
+              <label for="simContent">Announcement Details</label>
+              <textarea id="simContent" rows="3">Students are advised to complete their enrollment requirements before the deadline.</textarea>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button id="btnSimSaveDB" class="btn-sim-action" style="background: #0d9488;">💾 1. Save to Database</button>
+              <button id="btnSimPublish" class="btn-sim-action" style="background: #2563eb;">🚀 2. Publish Live</button>
+              <button id="btnSimChangeDeadline" class="btn-sim-action" style="background: #f59e0b; color: #78350f;">✏️ Extend to Nov 30</button>
+            </div>
+          </div>
+
+          <!-- Right: CDA Public Page Preview -->
+          <div class="sim-pane">
+            <div class="sim-pane-title">
+              <span>🌐 Public School Portal (CDA Delivery)</span>
+              <span style="font-size: 0.75rem; background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px;">Live URL: /news</span>
+            </div>
+            <div id="livePreviewContainer" class="sim-preview-article" style="border-width: 2px;">
+              <span id="livePreviewCategory" style="font-size: 0.75rem; font-weight: 800; color: #2563eb; text-transform: uppercase;">Category: Admissions</span>
+              <h4 id="livePreviewTitle" style="font-size: 1.25rem; font-weight: 800; margin: 0.35rem 0;">Enrollment Period for Second Semester</h4>
+              <div id="livePreviewDate" style="font-size: 0.82rem; color: #64748b; margin-bottom: 0.75rem;">📅 Published Date: November 15</div>
+              <p id="livePreviewContent" style="font-size: 0.95rem; line-height: 1.5; color: var(--text-main);">
+                Students are advised to complete their enrollment requirements before the deadline.
+              </p>
+              <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); font-size: 0.8rem; color: #15803d; font-weight: 700;">
+                ✓ Notice rendered automatically without touching HTML or web server code!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION V: ADVANTAGES AND LIMITATIONS -->
+    <section id="section-pros-cons" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section V</span>
+          <h2 class="section-title">Advantages and Limitations of CMS</h2>
+          <p class="section-intro-text">Critical evaluation of benefits against technical constraints and security considerations.</p>
+        </div>
+      </div>
+
+      <div class="pros-cons-grid">
+        <div class="pros-box">
+          <h3>✅ Key Advantages</h3>
+          <ul>
+            <li><strong>Easy Content Management:</strong> Non-technical users can author and publish with graphical interfaces.</li>
+            <li><strong>Reduced Coding Requirements:</strong> Everyday web upkeep no longer relies on software engineers.</li>
+            <li><strong>Collaborative Workflows:</strong> Multi-user teams with designated permissions streamline governance.</li>
+            <li><strong>Rapid Site Updates:</strong> Urgent announcements propagate in seconds across the entire site.</li>
+            <li><strong>Consistent Reusable Design:</strong> Themes guarantee visual uniformity across thousands of pages.</li>
+            <li><strong>High Scalability:</strong> Modern CMS platforms comfortably handle growth from hundreds to millions of records.</li>
+            <li><strong>Modular Extensions:</strong> Thousands of plugins expand functionality (SEO, analytics, forms, ecommerce).</li>
+          </ul>
+        </div>
+
+        <div class="cons-box">
+          <h3>⚠️ Recognized Limitations</h3>
+          <ul>
+            <li><strong>Security Vulnerabilities:</strong> Outdated plugins, unpatched core software, or weak passwords invite exploits.</li>
+            <li><strong>Performance Overhead:</strong> Excessive plugins, unoptimized databases, and heavy scripts can degrade page speed.</li>
+            <li><strong>Ongoing Maintenance:</strong> Requires routine updates for core engines, themes, database tables, and security certificates.</li>
+            <li><strong>Customization Limits:</strong> Deep architectural changes or bespoke logic may require advanced PHP/JS programming.</li>
+            <li><strong>Third-Party Dependencies:</strong> Reliance on external plugin developers risks abandoned software or broken updates.</li>
+            <li><strong>Administrative Learning Curve:</strong> Editors and department heads must be trained on workflows and taxonomies.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION VI: PRACTICAL APPLICATION -->
+    <section id="section-activity" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section VI</span>
+          <h2 class="section-title">Practical Application &amp; Classroom Exercise</h2>
+          <p class="section-intro-text">Real-world analysis scenario and hands-on laboratory exercise.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">🎓</div>
+        <div class="callout-content">
+          <h4>Scenario: College Campus Web Overhaul</h4>
+          <p>A regional college wants to launch a modern portal where students view academic schedules, announcements, sports events, and admission requirements. Faculty members need to update syllabi without contacting IT.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin: 1.5rem 0 0.75rem;">Class Discussion Questions</h3>
+      <ol style="margin-left: 1.5rem; font-size: 0.95rem; line-height: 1.8; color: var(--text-main);">
+        <li>Why should the college transition away from a static HTML site to a modern CMS?</li>
+        <li>What CMS architecture (Traditional, Decoupled, or Headless) would suit a standard college budget and maintenance team?</li>
+        <li>What role does the relational database play when 5,000 students query the same announcement at 9:30 AM?</li>
+        <li>Who on campus should hold "Administrator" privileges versus "Author" or "Contributor" status?</li>
+        <li>What is the fundamental difference in how student grades are displayed on a static site versus a dynamic portal?</li>
+        <li>How does content versioning prevent accidental erasure of school regulations?</li>
+      </ol>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; margin-top: 1.5rem;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem;">Lab Exercise: Creating a CMS Website Concept</h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Students will conceptualize or configure a five-page school website containing: <em>Home Page, About Us, Announcements, Events, and Contact Us</em>.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; font-size: 0.88rem;">
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">1. Access dashboard</div>
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">2. Create new page</div>
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">3. Add formatted text</div>
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">4. Upload campus image</div>
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">5. Create categories</div>
+          <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 4px; border-left: 3px solid var(--primary);">6. Publish page live</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION VII: GENERALIZATION & TAKEAWAYS -->
+    <section id="section-generalization" class="lecture-section">
+      <div class="section-header">
+        <div>
+          <span class="section-number-pill">Section VII</span>
+          <h2 class="section-title">Generalization &amp; Key Takeaways</h2>
+          <p class="section-intro-text">Core principles to retain for professional web engineering.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin: 1.5rem 0;">
+        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border-top: 4px solid var(--primary);">
+          <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">CMA + CDA + Database</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">The CMA enables intuitive authoring, the Database provides persistent relational storage, and the CDA delivers assembled content to visitors.</p>
+        </div>
+        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border-top: 4px solid var(--secondary);">
+          <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">Content &amp; Presentation Separation</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">By divorcing article text from HTML templates, updates can happen continuously without touching system code or causing layout breaks.</p>
+        </div>
+        <div style="background: var(--bg-surface); padding: 1.25rem; border-radius: var(--radius-md); border-top: 4px solid var(--accent);">
+          <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">Information Over Appearance</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">A modern website is not merely what visitors see. It is how information is authored, verified, organized, secured, and delivered to the people who depend on it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION VIII: ASSESSMENT LAUNCHPAD -->
+    <section class="cta-assessment-banner">
+      <h2>Ready for the Module Assessment?</h2>
+      <p>
+        Students will now test their comprehension across 15 Multiple Choice questions, 5 Identification questions, and 5 Short Answer analytical items. Hints are available for each question!
+      </p>
+      <a href="assessment.html" class="btn-launch-assessment" target="_blank">
+        <span>✍️ Open Student Assessment Portal</span>
+        <span>➔</span>
+      </a>
+      <div style="margin-top: 1.25rem; font-size: 0.85rem; color: #94a3b8;">
+        Separate Page • Mobile &amp; Desktop Compatible • Answer Key Hidden from Students • Hints Included
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2.5rem 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.88rem; background: var(--bg-surface);">
+    <p><strong>Web Content Management (CMS) Lecture Portal</strong> | College / Undergraduate Curriculum</p>
+    <p style="margin-top: 0.35rem;">Designed for Projector Lecture Delivery &amp; Multi-Device Study</p>
+  </footer>
+
+  <script src="js/lesson.js"></script>
+</body>
+</html>
+
